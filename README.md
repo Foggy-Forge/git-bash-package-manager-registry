@@ -1,0 +1,1 @@
+# git-bash-package-manager-registry
