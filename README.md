@@ -24,6 +24,8 @@ git-bash-package-manager-registry/
       jq.yaml
     fd/
       fd.yaml
+    tree/
+      tree.yaml
 ```
 
 Each package lives in `packages/<name>/<name>.yaml`.
@@ -39,6 +41,7 @@ Each package lives in `packages/<name>/<name>.yaml`.
 | **ripgrep** | Fast grep alternative (rg) | [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) |
 | **jq** | Lightweight JSON processor | [jqlang/jq](https://github.com/jqlang/jq) |
 | **fd** | Fast alternative to find | [sharkdp/fd](https://github.com/sharkdp/fd) |
+| **tree** | Recursive directory listing command | [GnuWin32](https://gnuwin32.sourceforge.net/packages/tree.htm) |
 
 ---
 
