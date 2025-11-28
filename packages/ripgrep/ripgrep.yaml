@@ -1,0 +1,20 @@
+name: ripgrep
+version: 14.1.1
+description: "Fast line-oriented search tool that recursively searches directories for a regex pattern"
+homepage: "https://github.com/BurntSushi/ripgrep"
+license: "MIT OR Unlicense"
+
+platforms:
+  - os: windows
+    arch: amd64
+    archive: true
+    url: "https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-pc-windows-msvc.zip"
+    checksum: "sha256:2a7e0ba0b1c7c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0"
+
+install:
+  steps:
+    - type: extract
+      to: "{{ .TmpDir }}/ripgrep"
+    - type: copy
+      from: "{{ .TmpDir }}/ripgrep/ripgrep-14.1.1-x86_64-pc-windows-msvc/rg.exe"
+      to: "{{ .BinDir }}/rg.exe"

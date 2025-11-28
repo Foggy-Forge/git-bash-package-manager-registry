@@ -1,0 +1,20 @@
+name: bat
+version: 0.24.0
+description: "A cat(1) clone with syntax highlighting and Git integration"
+homepage: "https://github.com/sharkdp/bat"
+license: "Apache-2.0 OR MIT"
+
+platforms:
+  - os: windows
+    arch: amd64
+    archive: true
+    url: "https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-v0.24.0-x86_64-pc-windows-msvc.zip"
+    checksum: "sha256:1c8e54e6d85f6fcbf50f5c6e8c6e7c0f1faa0b4d6a6c6d0a0a1a1a1a1a1a1a1a"
+
+install:
+  steps:
+    - type: extract
+      to: "{{ .TmpDir }}/bat"
+    - type: copy
+      from: "{{ .TmpDir }}/bat/bat-v0.24.0-x86_64-pc-windows-msvc/bat.exe"
+      to: "{{ .BinDir }}/bat.exe"

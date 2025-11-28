@@ -1,0 +1,20 @@
+name: fzf
+version: 0.58.0
+description: "A general-purpose command-line fuzzy finder"
+homepage: "https://github.com/junegunn/fzf"
+license: "MIT"
+
+platforms:
+  - os: windows
+    arch: amd64
+    archive: true
+    url: "https://github.com/junegunn/fzf/releases/download/v0.58.0/fzf-0.58.0-windows_amd64.zip"
+    checksum: "sha256:d02df670261f3e4cca2934dc8f089adb09de6b3dfd0f4f90c7e16eb55e7f5a18"
+
+install:
+  steps:
+    - type: extract
+      to: "{{ .TmpDir }}/fzf"
+    - type: copy
+      from: "{{ .TmpDir }}/fzf/fzf.exe"
+      to: "{{ .BinDir }}/fzf.exe"

@@ -1,0 +1,18 @@
+name: jq
+version: 1.7.1
+description: "Lightweight and flexible command-line JSON processor"
+homepage: "https://jqlang.github.io/jq/"
+license: "MIT"
+
+platforms:
+  - os: windows
+    arch: amd64
+    archive: false
+    url: "https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-windows-amd64.exe"
+    checksum: "sha256:de040f5f7a36f666079c564d0d8c0f5e3c4a6a6c4a4a4a4a4a4a4a4a4a4a4a4a"
+
+install:
+  steps:
+    - type: copy
+      from: "{{ .TmpDir }}/jq-windows-amd64.exe"
+      to: "{{ .BinDir }}/jq.exe"
