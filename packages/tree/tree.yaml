@@ -8,7 +8,7 @@ platforms:
   - os: windows
     arch: amd64
     archive: true
-    url: "https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download"
+    url: "https://downloads.sourceforge.net/project/gnuwin32/tree/1.5.2.2/tree-1.5.2.2-bin.zip"
     checksum: "sha256:be9987a8cc4f8d7c24e37babb1c5fc2e63611e2935d1534e60ce6de2f6253dcc"
 
 install:
